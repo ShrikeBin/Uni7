@@ -1,0 +1,47 @@
+\begin{frame}[squeeze]{}
+
+\footnotesize
+
+	\begin{twierdzenie}[Grafy skoñczone]
+		Dla \textcolor{black}{grafu skoñczonego} $\mathcal{G}=(V,E)$, $|V|=m$ i \textcolor{black}{wierzcho³ka} $v\in V$ mamy:
+		$$2-\slfrac{1}{m} \;\leq\; \E{MC_{v,\mathcal{G}}^k} \;\leq\; k\left( \HarmonicN{m} - \HarmonicN{k} + 1\right)~.$$
+	\end{twierdzenie}
+
+
+	\begin{twierdzenie}[Grafy nieskoñczone]
+		Za³ó¿my, ¿e $\;0\leq\mu\leq1 \;$ oraz, ¿e \underline{struktura grafu} spe³nia zale¿noœæ
+		$$\slfrac{|\SPHERE{v}{n}|}{|\DISC{v}{n}|} = \BigTh{\slfrac{1}{n^{\mu}}}~.$$
+		Wówczas:
+		
+			%Tabela
+			\renewcommand{\arraystretch}{2}
+				\begin{flushright}
+					\begin{tabular}{|c||c|c|}
+						\hline
+						  & $\E{MC_{v,n}^k}$ & $\var{MC_{v,n}^k}$ \\
+						\hline
+						\hline
+						$ \mu=1$ & $\BigTh{\ln n}$  &  $\BigTh{\ln n}$\\
+						\hline
+						$0<\mu<1$ & $\BigTh{n^{1-\mu}}$ &  $\BigTh{n^{1-\mu}}$\\
+						\hline
+						$ \mu=0 $  & $\BigTh{n}$ &  $\BigO{n}$ \\
+						\hline
+					\end{tabular}
+				\end{flushright}
+
+		
+			%Komentarze do tabeli
+			\begin{tikzpicture}[overlay]
+				\node at (1.7,2.4)   (){wolno rosn¹ce grafy,};
+				\node at (1.9,2)   (){np. linia, siatka, etc.\;\;\;\;\;};
+				\node at (1.7,1.1)   (){szybko rosn¹ce grafy,};
+				\node at (1.8,0.7)   (){np. o strukturze drzewa};
+				\draw [->] (3.5,2.2) to (4.3,2.2);
+				\draw  [->] (3.5,0.9) to (4.3,0.9);
+			\end{tikzpicture}
+		
+	\end{twierdzenie}
+
+\end{frame}
+

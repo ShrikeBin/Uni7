@@ -1,0 +1,46 @@
+\begin{tikzpicture}[remember picture, overlay]
+				\node [shift={(2.2 cm,-4.5cm)}]  at (current page.north west)
+				{
+					\tikzstyle{place}=[circle,draw=blue!50,fill=blue!20,thick,inner sep=0pt,minimum size=4mm]
+					\tikzstyle{red place}=[circle,draw=red!50,fill=yellow,thick,inner sep=0pt,minimum size=4mm]
+					
+					{\scalefont{0.6}
+						
+						\begin{tikzpicture}
+							
+							\only<1>{
+								\node at (-1,1) [place]  (1) {$0.45$};
+								\node at (-1,3) [place]  (2) {$0.76$};
+								\node at ( 0,2) [place]  (3) {$0.49$};
+								\node at ( 0.2,0) [place]  (4) {$0.78$};
+								\node at (1.5,2.5) [place]  (6) {$0.67$};
+								\node at ( 2,-0.2) [place] (7) {$0.86$};
+								\node at (2.5,1.7) [place]  (8) {$0.22$};}
+							
+							\only<1,2>{
+								\node at ( 1,1) [ red place] (5) {$0.01$};}
+							
+							\only<2>{
+								\node at (-1,1) [red place] (1) {$0.01$};
+								\node at (-1,3) [red place]  (2) {$0.01$};
+								\node at ( 0,2) [red place](3) {$0.01$};
+								\node at ( 0.2,0) [red place]  (4) {$0.01$};
+								\node at (1.5,2.5) [red place] (6) {$0.01$};
+								\node at ( 2,-0.2) [red place](7) {$0.01$};
+								\node at (2.5,1.7) [red place]  (8) {$0.01$};}
+							
+							\draw [->,-latex] (1) to (2);
+							\draw [<->,-latex] (2) to (3);
+							\draw [<->,-latex]  (3) to (6);
+							\draw [<->,-latex]  (3) to (5);
+							\draw [<->,-latex]  (5) to (6);
+							\draw [->,-latex]  (6) to (8);
+							\draw [->,-latex]  (8) to (7);
+							\draw [->,-latex]  (7) to (5);
+							\draw [->,-latex]  (5) to (4);
+							\draw [<->,-latex]  (1) to (4);
+							
+						\end{tikzpicture}
+					}
+				};
+\end{tikzpicture}

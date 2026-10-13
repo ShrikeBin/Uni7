@@ -1,0 +1,30 @@
+\begin{frame}[fragile]{Propagacja minimum}
+	
+\begin{center}
+
+    \begin{minipage}[t]{0.8\textwidth}
+
+        \algrenewcommand\algorithmicrequire{\underline{\textsc{Initialization}}}
+        \texttt{
+        \begin{algorithmic}[1]
+            \Require
+            \State $\xi \gets$  Random(0,1)
+            \State broadcast $\langle \xi \rangle$ to neighbors                  
+        \end{algorithmic}}
+
+        \algrenewcommand\algorithmicrequire{\underline{\textsc{At each round}}}
+        \texttt{
+         \begin{algorithmic}[1]
+            \Require
+            \State gather $\;\{\xi_{ i }\}_{i \in S}\;$ from all neighbors
+            \State x $\gets$ min$\{\xi_{ i} : i \in S\}$
+            \State if x $< \;\; \xi$ then
+            \State   \hspace{0.4cm}$\xi \gets$ x
+            \State   \hspace{0.4cm}broadcast $\langle \xi \rangle$ to neighbors                        
+         \end{algorithmic}}
+     
+    \end{minipage}
+
+\end{center}
+
+\end{frame}

@@ -1,0 +1,24 @@
+\begin{frame}[squeeze]{Analiza}
+
+	\begin{itemize}
+	\item[$d(u,v)$] --  d³ugoœæ œcie¿ki z $u$ do $v$
+	\item[$\SPHERE{v}{r}$] $= \{u: d(u,v) = r\}$
+	\item[$\DISC{v}{r}$] $ = \{u: d(u,v)\leq r\}$
+	\end{itemize}
+
+	\input{slajdy/sfera.tex}
+
+	\vspace{2cm}	
+
+    \begin{twierdzenie}[Propagacja minimum]
+    	Niech $M_{v,r}$  oznacza zdarzenie, ¿e $v$ nadaje w rundzie $r$ oraz
+        niech $\mathcal{G} =(V,E)$ bêdzie graf skierowanym i niech $v\in V$.
+        Za³ó¿my, ¿e $\SPHERE{v}{r}\neq \emptyset$.
+        Wówczas zdarzenia $M_{v,0}, \ldots M_{v,r}$ \underline{s¹ niezale¿ne}
+        oraz
+        $$
+          \Pr[M_{v,j}] = |\SPHERE{v}{j}|\Big/{|\DISC{v}{j}|}~.
+        $$
+    \end{twierdzenie}
+
+\end{frame}
