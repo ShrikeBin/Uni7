@@ -1,2 +1,4 @@
-# Uni7
-7th semester
+# 7th Sem Repo
+
+- SM - seminary
+- PE - programming environment
