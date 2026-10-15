@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: ./task1.bash [-r] DIR
-#   -r  raw output (plain list, exactly as in the assignment)
+#   -r  raw output
 raw=0
 if [ "$1" = "-r" ]; then raw=1; shift; fi
 [ -d "$1" ] || { echo "Usage: $0 [-r] DIR" >&2; exit 1; }

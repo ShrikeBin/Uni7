@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: ./task4.bash [-r] DIR
-#   -r  raw output ("word:" then "file:line:text", as in the assignment)
+#   -r  raw output
 raw=0
 [ "$1" = "-r" ] && { raw=1; shift; }
 [ -d "$1" ] || { echo "Usage: $0 [-r] DIR" >&2; exit 1; }

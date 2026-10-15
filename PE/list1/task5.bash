@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: ./task5.bash [-q] DIR
-#   -q  quiet mode (no report, like the original version)
+#   -q  quiet mode - no report
 quiet=0
 [ "$1" = "-q" ] && { quiet=1; shift; }
 [ -d "$1" ] || { echo "Usage: $0 [-q] DIR" >&2; exit 1; }

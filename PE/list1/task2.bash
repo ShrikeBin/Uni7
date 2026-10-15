@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: ./task2.bash [-r] DIR
-#   -r  raw output ("count word", alphabetical, as in the assignment)
+#   -r  raw output
 raw=0
 [ "$1" = "-r" ] && { raw=1; shift; }
 [ -d "$1" ] || { echo "Usage: $0 [-r] DIR" >&2; exit 1; }
